@@ -1,0 +1,66 @@
+<meta charset="utf-8">
+
+<h1>Calculo de IMC</h1>
+
+<script>
+	function pulaLinha() {
+
+		document.write("<br>");	
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+	
+	function calculaIMC(peso,altura) {
+
+		return peso / ( altura * altura);
+	}
+
+	var nome = prompt("Digite seu nome");
+	var alturainf = prompt(nome + "Qual é seu peso ? ");
+	var pesoinf = prompt(nome + "Quanto voce tem de altura ?");
+
+	var imc = calculaIMC(alturainf,pesoinf);
+
+	mostra(nome + "Seu imc é de " + imc);
+
+	if( imc < 18.5){
+
+		mostra("Sua classificação é magreza");
+
+	}
+
+	if (imc > 18.5 && imc < 24.9){
+
+		mostra("Sua classificação é normal");
+	}
+
+	if (imc >= 25 && imc < 29.9){
+
+		mostra("Sua classificação é sobrepeso");
+	}
+
+	if (imc >= 30 &&  imc < 39.9){
+
+		mostra("Sua classificação é obesidade");
+	}
+
+	if (imc >= 40) {
+
+		mostra("Sua classificação é obesidade grave");
+	}
+
+
+
+
+
+
+
+
+
+
+
+</script>
